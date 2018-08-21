@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1, 
+        "title": "Banana In A Box", 
+        "author": "Monkey Jumpy", 
+        "date": "06/11/2017", 
+        "image": "../assets/images/banana.jpg"
+    },
+
+    {
+        "id": 2,
+        "title": "The Last Samurai Coder",
+        "author": "Sue Geek",
+        "date": "15/05/2010",
+        "image": "../assets/images/geek.jpg"
+    },
+
+    {
+        "id": 3,
+        "title": "The Big Bug",
+        "author": "James Piper",
+        "date": "21/03/1989",
+        "image": "../assets/images/code-love.jpg"
+    },
+    {
+        "id": 4, 
+        "title": "I Am Watching You", 
+        "author": "The Big Brother", 
+        "date": "19/04/2011", 
+        "image": "../assets/images/code.jpg"
+    },
+
+    {
+        "id": 5,
+        "title": "She Code",
+        "author": "Nela Femina",
+        "date": "30/08/2012",
+        "image": "../assets/images/girl-code.jpg"
+    },
+
+    {
+        "id": 6,
+        "title": "The Testosterone",
+        "author": "Andy Balls",
+        "date": "02/11/1993",
+        "image": "../assets/images/male-code.jpg"
+    }
+  ]

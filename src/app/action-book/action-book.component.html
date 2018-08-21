@@ -1,0 +1,58 @@
+<mat-card-header>
+  <mat-toolbar class="toolbar">
+    <mat-card-title>Add a Book</mat-card-title>
+    <span class="toolbar-spacer"></span>
+  </mat-toolbar>
+</mat-card-header>
+<mat-card-content>
+  <div class="container">
+    <form [formGroup]="addBookForm">
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6">
+            <label>Title</label>
+            <input type="text" formControlName="title" class="form-control">
+            <div class="alert alert-danger" role="alert" *ngIf="title.invalid && title.errors.alreadyTaken">
+              Title already exsits
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="title.invalid && title.errors.required && title.touched">
+              Required
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="title.invalid && title.errors.pattern && title.touched">
+              Cannot use non-English characters
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label>Author</label>
+            <input type="text" formControlName="author" class="form-control">
+            <div class="alert alert-danger" role="alert" *ngIf="author.invalid && author.errors.required && author.touched">
+              Required
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Date</label>
+            <input type="text" formControlName="date" class="form-control">
+            <div class="alert alert-danger" role="alert" *ngIf="date.invalid && date.errors.required && date.touched">
+              Required
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2 mt-2">
+            <button type="submit" class="btn btn-success" [disabled]="addBookForm.invalid" (click)="onSubmit()">
+              <mat-icon>save</mat-icon>
+            </button>
+          </div>
+          <div class="col-md-2 mt-2">
+            <button type="submit" class="btn btn-danger" (click)="onNoClick()">
+              <mat-icon>X</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</mat-card-content>

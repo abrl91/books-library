@@ -1,0 +1,26 @@
+<button class="btn btn-dark mt-2 ml-2" (click)="addBookButton()">
+  +
+</button>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let book of bs.booksList">
+      <div class="col-sm">
+        <div class="card mt-4" style="width: 18rem;">
+          <img class="card-img-top" [src]="book.image" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{ book.title | capitalize }}</h5>
+            <p class="card-text">{{ book.author | capitalize }}</p>
+            <p class="card-text">{{ book.date }}</p>
+            <div class="row">
+              <div class="col">
+                <button class="btn btn-outline-success btn-block" (click)="editBook(book)">Edit</button>
+              </div>
+              <div class="col">
+                <button class="btn btn-outline-danger btn-block" (click)="deleteBook(book.id)">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
